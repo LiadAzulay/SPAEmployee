@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title></title>
+    <link rel="stylesheet" href="template/index.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="employee.js"></script>
+</head>
+
+<body ng-controller="employeeController" ng-app="ma">
+    <div class="jumbotron text-center">
+        <h1>Employees</h1>
+        <p>Resize this responsive page to see the effect!</p>
+    </div>
+
+        <div class="container">
+
+        <p>
+            <input id="filter" placeholder="Filter for:" ng-model="searchText" />
+        </p>
+
+        <div ng-repeat="employee in employees | filter: searchText" id="repeat">
+            <div class="card" id="card">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>{{employee.empName}}</strong></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><strong>Employee Code = </strong>{{employee.empId}}</h6>
+                    <p class="card-text"><strong>salary </strong>= {{employee.salary}}, <strong> deptId </strong>= {{employee.deptId}}</p>
+                    
+                    <div id="delete">
+                        <button type="button" class="btn btn-danger" style="margin-right: 50px;" ng-click="deleteEmployee(employee.empId)">
+                            Delete
+                        </button>
+                      
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="newEmployee">
+        <h3>Add new employee</h3>
+        <form name="newEmployeeForm">
+            <div>
+                <input type="text" placeholder="Enter name" ng-model="new_employee.empName"
+                       class="form-text" size="30" style="border-radius: 10px; " required />
+                <input required type="text" placeholder="Enter Employee salary" ng-model="new_employee.salary"
+                       class="form-text" size="30" style="border-radius: 10px; " />
+                <input required type="text" placeholder="Enter Employee department" ng-model="new_employee.deptId"
+                       class="form-text" size="30" style="border-radius: 10px; " />
+                <button type="button" class="btn btn-primary" style="margin-right: 50px;" ng-click="addEmployee(new_employee)">Add</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+

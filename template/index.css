@@ -1,0 +1,25 @@
+#filter {
+    margin-top: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    background-color: #eee;
+}
+#repeat {
+    margin: 5px;
+    float: left;
+    text-align: center;
+
+}
+#card {
+    background: #eee;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    text-align: center;
+}
+#newEmployee {
+    padding-top: 25px;
+    clear: left;
+    position: center;
+}

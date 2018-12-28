@@ -1,0 +1,38 @@
+[
+{
+	"empName" : "James Dean",
+	"empId" : "1",	
+	"salary" : "20000",
+	"deptId": "1"
+},
+{
+	"empName" : "John Mark",
+	"empId" : "2",	
+	"salary" : "20000",
+	"deptId": "2"
+},
+{
+	"empName" : "Nancy Sharon",
+	"empId" : "3",	
+	"salary" : "25000",
+	"deptId": "3"
+},
+{
+	"empName" : "Ruth Betty",
+	"empId" : "4",	
+	"salary" : "15000",
+	"deptId": "2"
+},
+{
+	"empName" : "Amy Brenda",
+	"empId" : "5",	
+	"salary" : "14000",
+	"deptId": "2"
+},
+{
+	"empName" : "Eric Stephen",
+	"empId" : "6",	
+	"salary" : "8000",
+	"deptId": "1"
+}
+]
